@@ -62,7 +62,7 @@
                         <p class="text-secondary">Configure las opciones de su requerimiento técnico para proyectar el costo estimado de inversión.</p>
                     </div>
 
-                    <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4">
+                    <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4 mb-5">
                         <form id="budgetForm">
                             <div class="row g-4">
                                 <div class="col-md-6">
@@ -105,6 +105,55 @@
                             <a href="contacto.html" class="btn btn-primary btn-lg fw-semibold px-5 shadow">Enviar Propuesta Formal</a>
                         </div>
                     </div>
+
+                    <!-- Sección de Tabla Comparativa Requerida por la Rúbrica -->
+                    <div class="mt-5">
+                        <div class="text-center mb-4">
+                            <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle rounded-pill px-3 py-2 mb-2 text-uppercase fw-semibold">Guía de Referencia</span>
+                            <h3 class="fw-bold mb-2">Tabla Comparativa de Servicios y Alcance</h3>
+                            <p class="text-secondary small">Consulte el nivel de complejidad y el plan de soporte correspondiente según el tipo de servicio contratado.</p>
+                        </div>
+
+                        <div class="table-responsive shadow-sm rounded-4 overflow-hidden border bg-body">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-dark text-uppercase fs-7 font-monospace">
+                                    <tr>
+                                        <th scope="col" class="py-3 px-4">Tipo de Servicio</th>
+                                        <th scope="col" class="py-3 px-4">Alcance del Proyecto</th>
+                                        <th scope="col" class="py-3 px-4">Nivel de Complejidad</th>
+                                        <th scope="col" class="py-3 px-4">Plan de Soporte</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold px-4 py-3"><i class="fa-solid fa-database text-primary me-2"></i> Arquitectura & DB SQL</td>
+                                        <td>Corporativo / Migración de Datos</td>
+                                        <td><span class="badge bg-danger-subtle text-danger border border-danger-subtle">Alta Complejidad</span></td>
+                                        <td><span class="badge bg-success-subtle text-success">Soporte 24/7 Crítico</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold px-4 py-3"><i class="fa-solid fa-code text-info me-2"></i> Desarrollo Web / App</td>
+                                        <td>Mediano / Solución a la Medida</td>
+                                        <td><span class="badge bg-warning-subtle text-warning border border-warning-subtle">Complejidad Media</span></td>
+                                        <td><span class="badge bg-info-subtle text-info">Soporte Estándar (5x8)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold px-4 py-3"><i class="fa-solid fa-shield-halved text-success me-2"></i> Ciberseguridad & Redes</td>
+                                        <td>Auditoría y Segmentación VPN</td>
+                                        <td><span class="badge bg-warning-subtle text-warning border border-warning-subtle">Complejidad Media</span></td>
+                                        <td><span class="badge bg-success-subtle text-success">Monitoreo 24/7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold px-4 py-3"><i class="fa-solid fa-server text-warning me-2"></i> Virtualización Nube/VirtualBox</td>
+                                        <td>Pequeño Negocio / Consolidación</td>
+                                        <td><span class="badge bg-primary-subtle text-primary border border-primary-subtle">Básica / Inicial</span></td>
+                                        <td><span class="badge bg-secondary-subtle text-secondary">Mantenimiento Mensual</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
