@@ -1,0 +1,165 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y VARIABLES
+   ========================================================================== */
+:root {
+  --primary-gradient: linear-gradient(135deg, #0d6efd 0%, #0a4b9c 100%);
+  --header-gradient: linear-gradient(120deg, #1e3c72 0%, #2a5298 100%);
+  --footer-bg: #111827;
+  --accent-color: #0d6efd;
+  --text-dark: #212529;
+  --border-radius-custom: 12px;
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   SELECTORES AVANZADOS Y ENCABEZADO
+   ========================================================================== */
+/* Gradientes y sombras */
+.custom-header {
+  background: var(--header-gradient);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.animate-title {
+  transition: transform var(--transition-speed) ease;
+}
+
+.animate-title:hover {
+  transform: scale(1.02);
+}
+
+/* Selector descendente para la navegación */
+nav.navbar ul.navbar-nav li.nav-item a.nav-link {
+  position: relative;
+  transition: color var(--transition-speed) ease;
+}
+
+/* Pseudoclase y Pseudo-elemento ::after para animación de línea */
+nav.navbar ul.navbar-nav li.nav-item a.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #ffffff;
+  transition: all var(--transition-speed) ease;
+}
+
+nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover::after {
+  width: 80%;
+  left: 10%;
+}
+
+/* ==========================================================================
+   TARJETAS, CARDS Y TRANSICIONES (TRANSFORM, BOX-SHADOW)
+   ========================================================================== */
+.custom-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--border-radius-custom);
+  overflow: hidden;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+/* Transición al hacer hover */
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+.section-title {
+  position: relative;
+  color: #1e3c72;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   BOTONES E INTERACTIVIDAD
+   ========================================================================== */
+.btn-interactive {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.btn-interactive:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   TABLA ACCESIBLE Y ESTILIZADA
+   ========================================================================== */
+.custom-table {
+  background-color: #ffffff;
+  border-radius: var(--border-radius-custom);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.custom-table thead {
+  background-color: #1e3c72;
+  color: #ffffff;
+}
+
+.custom-table th, 
+.custom-table td {
+  padding: 14px 16px;
+}
+
+/* Selector de fila par (pseudoclase nth-child) */
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #e2e8f0;
+  transition: background-color 0.2s ease;
+}
+
+/* ==========================================================================
+   FORMULARIO Y ESTADOS DE FOCO (ACCESIBILIDAD)
+   ========================================================================== */
+.form-card {
+  border-top: 4px solid var(--accent-color);
+}
+
+.form-control:focus, 
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  outline: none;
+}
+
+/* High Contrast & Focus visibility */
+a:focus-visible, 
+button:focus-visible, 
+input:focus-visible, 
+select:focus-visible, 
+textarea:focus-visible {
+  outline: 3px solid #ffc107 !important;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA / FOOTER
+   ========================================================================== */
+.custom-footer {
+  background-color: var(--footer-bg);
+  color: #9ca3af;
+  border-top: 1px solid #374151;
+}

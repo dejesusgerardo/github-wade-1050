@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dejesus & Associated | Soluciones Tecnológicas e Infraestructura TI</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- Script ejecutable temprano para evitar parpadeo de tema -->
+    <script src="js/theme-toggle.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body text-body">
+
+    <!-- Header / Navegación Reutilizable -->
+    <header class="sticky-top glass-nav">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex items-center gap-3" href="index.html">
+                    <div class="brand-icon">D&A</div>
+                    <div class="d-flex flex-column ms-2">
+                        <span class="fw-bold fs-5 lh-1 text-body">Dejesus & Associated</span>
+                        <span class="text-primary text-uppercase font-monospace fs-7 fw-semibold mt-1">Technology Solutions</span>
+                    </div>
+                </a>
+
+                <!-- Botón Toggle Móvil -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú de Navegación -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-menu navbar-nav mx-auto mb-2 mb-lg-0 fw-medium gap-lg-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="presupuesto.html">Presupuesto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="proyectos.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <!-- Botones de Acción -->
+                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                        <button id="themeToggle" type="button" class="btn btn-outline-secondary rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Cambiar Tema">
+                            <i id="themeIcon" class="fa-solid fa-moon"></i>
+                        </button>
+                        <a href="contacto.html" class="btn btn-primary rounded-pill px-4 fw-semibold shadow-sm">
+                            Consulta Gratis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow-1">
+        
+        <!-- Hero Section -->
+        <section class="py-5 py-lg-6 position-relative overflow-hidden">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6">
+                        <div class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mb-4 text-uppercase fw-semibold">
+                            <i class="fa-solid fa-bolt me-1"></i> Innovación & Estrategia Digital
+                        </div>
+                        <h1 class="display-4 fw-extrabold text-body lh-sm mb-4">
+                            Transformamos datos e infraestructura en <span class="text-gradient">Ventaja Competitiva</span>
+                        </h1>
+                        <p class="lead text-secondary mb-4">
+                            En <strong>Dejesus & Associated</strong> diseñamos e implementamos arquitecturas de software, infraestructura en la nube, ciberseguridad y bases de datos optimizadas para escalar su organización.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row gap-3">
+                            <a href="contacto.html" class="btn btn-primary btn-lg rounded-3 fw-semibold px-4 shadow">
+                                Iniciar Proyecto <i class="fa-solid fa-arrow-right ms-2 fs-6"></i>
+                            </a>
+                            <a href="servicios.html" class="btn btn-outline-secondary btn-lg rounded-3 fw-semibold px-4">
+                                Explorar Servicios
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80" class="card-img-top object-fit-cover" alt="Infraestructura TI" style="height: 400px;">
+                                <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 text-white p-4">
+                                    <h5 class="card-title fw-bold mb-1"><i class="fa-solid fa-shield-halved me-2 text-primary"></i> Monitoreo & Seguridad 24/7</h5>
+                                    <p class="card-text text-light small">Infraestructura resiliente orientada a alto rendimiento y máxima continuidad del negocio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section class="py-5 bg-body-tertiary border-top border-bottom">
+            <div class="container">
+                <div class="text-center max-w-2xl mx-auto mb-5">
+                    <h2 class="fw-bold display-6 mb-3">Servicios Especializados</h2>
+                    <p class="text-secondary">Soluciones integrales adaptadas a los requerimientos corporativos y normativas de seguridad.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Servicio 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm card-hover p-4 rounded-4">
+                            <div class="rounded-3 bg-primary-subtle text-primary p-3 d-inline-block mb-3" style="width: fit-content;">
+                                <i class="fa-solid fa-database fs-3"></i>
+                            </div>
+                            <h4 class="fw-bold h5 mb-3">Gestión & Arquitectura DB</h4>
+                            <p class="text-secondary small mb-4">Diseño, optimización y administración de bases de datos relacionales y NoSQL (SQL Server, MySQL, PostgreSQL) bajo estándares de alta disponibilidad.</p>
+                            <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 mt-auto object-fit-cover" alt="Bases de datos" style="height: 160px;">
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm card-hover p-4 rounded-4">
+                            <div class="rounded-3 bg-info-subtle text-info p-3 d-inline-block mb-3" style="width: fit-content;">
+                                <i class="fa-solid fa-code fs-3"></i>
+                            </div>
+                            <h4 class="fw-bold h5 mb-3">Desarrollo Web & Software</h4>
+                            <p class="text-secondary small mb-4">Creación de aplicaciones web dinámicas con Bootstrap 5, JavaScript, Python, PHP y soluciones completas a la medida de sus operaciones.</p>
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 mt-auto object-fit-cover" alt="Desarrollo Web" style="height: 160px;">
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="col-12">
+                            <div class="card h-100 border-0 shadow-sm card-hover p-4 rounded-4">
+                                <div class="rounded-3 bg-success-subtle text-success p-3 d-inline-block mb-3" style="width: fit-content;">
+                                    <i class="fa-solid fa-shield-halved fs-3"></i>
+                                </div>
+                                <h4 class="fw-bold h5 mb-3">Ciberseguridad e Infraestructura</h4>
+                                <p class="text-secondary small mb-4">Configuración de redes seguras, auditorías de sistemas, entornos de virtualización (VirtualBox / Proxmox) y políticas de protección de datos.</p>
+                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 mt-auto object-fit-cover" alt="Ciberseguridad" style="height: 160px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Calculadora de Presupuesto Integrada -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4">
+                            <div class="text-center mb-4">
+                                <h3 class="fw-bold mb-2"><i class="fa-solid fa-calculator text-primary me-2"></i>Calculadora Estimada de Presupuesto</h3>
+                                <p class="text-secondary small">Seleccione los requerimientos de su proyecto para obtener una estimación inicial instantánea.</p>
+                            </div>
+
+                            <form id="budgetForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="serviceType" class="form-label fw-medium">Tipo de Servicio</label>
+                                        <select class="form-select form-select-lg" id="serviceType">
+                                            <option value="" selected disabled>Seleccione un servicio...</option>
+                                            <option value="db">Arquitectura & DB SQL</option>
+                                            <option value="dev">Desarrollo Web / App</option>
+                                            <option value="sec">Ciberseguridad & Redes</option>
+                                            <option value="cloud">Infraestructura Nube / Virtualización</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="projectScope" class="form-label fw-medium">Alcance del Proyecto</label>
+                                        <select class="form-select form-select-lg" id="projectScope">
+                                            <option value="" selected disabled>Seleccione alcance...</option>
+                                            <option value="basic">Básico / Pequeño Negocio</option>
+                                            <option value="medium">Mediano / Reestructuración</option>
+                                            <option value="enterprise">Corporativo / Alta Disponibilidad</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="includeSupport">
+                                            <label class="form-check-label fw-medium" for="includeSupport">
+                                                Incluir Plan de Mantenimiento y Soporte 24/7 (+$450.00)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="alert alert-primary mt-4 mb-0 d-flex justify-content-between align-items-center rounded-3">
+                                <div>
+                                    <span class="d-block small text-uppercase fw-semibold">Presupuesto Estimado</span>
+                                    <h2 class="fw-bold mb-0 text-primary" id="totalBudget">$0.00</h2>
+                                </div>
+                                <a href="contacto.html" class="btn btn-primary fw-semibold px-4">Solicitar Propuesta Formal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Reutilizable -->
+    <footer class="bg-body-tertiary border-top py-4 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6">
+                    <span class="fw-bold text-body">Dejesus & Associated</span> — Technology Solutions &copy; 2026. Todos los derechos reservados.
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="servicios.html" class="text-secondary text-decoration-none me-3 small">Servicios</a>
+                    <a href="presupuesto.html" class="text-secondary text-decoration-none me-3 small">Presupuesto</a>
+                    <a href="contacto.html" class="text-secondary text-decoration-none small">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Lógica de la calculadora -->
+    <script src="js/budget-calculator.js"></script>
+</body>
+</html>

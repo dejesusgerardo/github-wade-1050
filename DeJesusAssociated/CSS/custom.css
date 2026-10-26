@@ -1,0 +1,66 @@
+/* css/custom.css */
+:root {
+  --brand-primary: #0284c7;
+  --brand-hover: #0369a1;
+  --bg-gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+  --bg-body-light: #f8fafc;
+  --text-light: #1e293b;
+  --card-bg-light: #ffffff;
+  --border-light: #e2e8f0;
+}
+
+[data-bs-theme="dark"] {
+  --bg-body-dark: #090d16;
+  --text-dark: #f8fafc;
+  --card-bg-dark: #111827;
+  --border-dark: #1f2937;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto Glassmorphism en Navegación */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+[data-bs-theme="dark"] .glass-nav {
+  background: rgba(15, 23, 42, 0.85);
+  border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+}
+
+/* Gradiente para Texto Destacado */
+.text-gradient {
+  background: var(--bg-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tarjetas con Efecto Hover */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Avatar Brand Logo */
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--bg-gradient);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
