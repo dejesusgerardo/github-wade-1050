@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Dejesus & Associated</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Script de Tema -->
+    <script src="js/theme-toggle.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body text-body">
+
+    <!-- Header / Navegación Reutilizable -->
+    <header class="sticky-top glass-nav">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex items-center gap-3" href="index.html">
+                    <div class="brand-icon">D&A</div>
+                    <div class="d-flex flex-column ms-2">
+                        <span class="fw-bold fs-5 lh-1 text-body">Dejesus & Associated</span>
+                        <span class="text-primary text-uppercase font-monospace fs-7 fw-semibold mt-1">Technology Solutions</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="presupuesto.html">Presupuesto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                        <button id="themeToggle" type="button" class="btn btn-outline-secondary rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Cambiar Tema">
+                            <i id="themeIcon" class="fa-solid fa-moon"></i>
+                        </button>
+                        <a href="contacto.html" class="btn btn-primary rounded-pill px-4 fw-semibold shadow-sm">Consulta Gratis</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow-1">
+        <section class="py-5 bg-body-tertiary border-bottom">
+            <div class="container text-center py-4">
+                <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mb-3 text-uppercase fw-semibold">Portafolio de Soluciones</span>
+                <h1 class="display-5 fw-extrabold mb-3">Nuestros Servicios Tecnológicos</h1>
+                <p class="text-secondary lead mx-auto" style="max-width: 700px;">Ofrecemos soluciones de infraestructura robustas, desarrollo de software a la medida y administración avanzada de datos para potenciar su organización.</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <!-- Detalle 1 -->
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100 p-4 rounded-4">
+                            <div class="rounded-3 bg-primary-subtle text-primary p-3 d-inline-block mb-3" style="width: fit-content;">
+                                <i class="fa-solid fa-database fs-2"></i>
+                            </div>
+                            <h3 class="fw-bold h4 mb-3">Gestión & Arquitectura de Bases de Datos</h3>
+                            <p class="text-secondary mb-4">Garantizamos la integridad, velocidad y disponibilidad de su activo más valioso: los datos. Diseñamos esquemas relacionales y NoSQL adaptados a cargas críticas.</p>
+                            <ul class="list-unstyled text-secondary mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Optimización de consultas SQL y Stored Procedures.</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Migración y normalización de bases de datos.</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i> Estrategias de respaldos automatizados y alta disponibilidad.</li>
+                            </ul>
+                            <a href="presupuesto.html" class="btn btn-outline-primary mt-auto">Cotizar este servicio</a>
+                        </div>
+                    </div>
+
+                    <!-- Detalle 2 -->
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100 p-4 rounded-4">
+                            <div class="rounded-3 bg-info-subtle text-info p-3 d-inline-block mb-3" style="width: fit-content;">
+                                <i class="fa-solid fa-code fs-2"></i>
+                            </div>
+                            <h3 class="fw-bold h4 mb-3">Desarrollo Web & Aplicaciones a la Medida</h3>
+                            <p class="text-secondary mb-4">Creamos herramientas corporativas dinámicas, paneles administrativos (Dashboards), sistemas de inventario y portales web optimizados para cualquier dispositivo.</p>
+                            <ul class="list-unstyled text-secondary mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-check text-info me-2"></i> Interfaces responsivas con Bootstrap 5 y JavaScript moderno.</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-info me-2"></i> Backends seguros en PHP y Python.</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-info me-2"></i> Control de versiones y despliegue continuo (Git/GitHub).</li>
+                            </ul>
+                            <a href="presupuesto.html" class="btn btn-outline-primary mt-auto">Cotizar este servicio</a>
+                        </div>
+                    </div>
+
+                    <!-- Detalle 3 -->
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100 p-4 rounded-4">
+                            <div class="rounded-3 bg-success-subtle text-success p-3 d-inline-block mb-3" style="width: fit-content;">
+                                <i class="fa-solid fa-shield-halved fs-2"></i>
+                            </div>
+                            <h3 class="fw-bold h4 mb-3">Ciberseguridad & Redes Corporativas</h3>
+                            <p class="text-secondary mb-4">Protegemos la infraestructura de su empresa contra amenazas informáticas mediante políticas de control de acceso, segmentación de redes y auditorías constantes.</p>
+                            <ul class="list-unstyled text-secondary mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Configuración de Firewalls y Redes VPN seguras.</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Implementación de Active Directory y permisos de usuario.</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Auditorías de vulnerabilidades y buenas prácticas.</li>
+                            </ul>
+                            <a href="presupuesto.html" class="btn btn-outline-primary mt-auto">Cotizar este servicio</a>
+                        </div>
+                    </div>
+
+                    <!-- Detalle 4 -->
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100 p-4 rounded-4">
+                            <div class="rounded-3 bg-warning-subtle text-warning p-3 d-inline-block mb-3" style="width: fit-content;">
+                                <i class="fa-solid fa-server fs-2"></i>
+                            </div>
+                            <h3 class="fw-bold h4 mb-3">Virtualización e Infraestructura TI</h3>
+                            <p class="text-secondary mb-4">Maximizamos el rendimiento de su hardware mediante la consolidación de servidores virtuales, entornos de pruebas seguros y administración de flotas tecnológicas.</p>
+                            <ul class="list-unstyled text-secondary mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Despliegue de entornos en VirtualBox / Proxmox.</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Configuración de servidores Windows Server y Linux.</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i> Mantenimiento preventivo y correctivo de equipos.</li>
+                            </ul>
+                            <a href="presupuesto.html" class="btn btn-outline-primary mt-auto">Cotizar este servicio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Tabla HTML Requerida por la Rúbrica -->
+        <section class="py-5 bg-body-tertiary border-top">
+            <div class="container">
+                <div class="text-center max-w-2xl mx-auto mb-5">
+                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mb-3 text-uppercase fw-semibold">Comparativa Técnica</span>
+                    <h2 class="fw-bold display-6 mb-3">Resumen de Niveles de Servicio y Alcance</h2>
+                    <p class="text-secondary">Compare las características clave de nuestras soluciones tecnológicas para elegir la opción ideal para su organización.</p>
+                </div>
+                <div class="table-responsive shadow-sm rounded-4 overflow-hidden bg-body">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-dark text-uppercase fs-7 font-monospace">
+                            <tr>
+                                <th scope="col" class="py-3 px-4">Servicio / Módulo</th>
+                                <th scope="col" class="py-3 px-4">Nivel de Alcance</th>
+                                <th scope="col" class="py-3 px-4">Tiempo Estimado</th>
+                                <th scope="col" class="py-3 px-4">Soporte Incluido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-semibold px-4 py-3"><i class="fa-solid fa-database text-primary me-2"></i> Gestión & Arquitectura DB</td>
+                                <td>Corporativo / Alta Disponibilidad</td>
+                                <td>2 - 4 Semanas</td>
+                                <td><span class="badge bg-success-subtle text-success">24/7 Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold px-4 py-3"><i class="fa-solid fa-code text-info me-2"></i> Desarrollo Web & Software</td>
+                                <td>Mediano / Personalizado</td>
+                                <td>3 - 6 Semanas</td>
+                                <td><span class="badge bg-info-subtle text-info">Estándar (L-V)</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold px-4 py-3"><i class="fa-solid fa-shield-halved text-success me-2"></i> Ciberseguridad & Redes</td>
+                                <td>Avanzado / Auditoría</td>
+                                <td>1 - 3 Semanas</td>
+                                <td><span class="badge bg-success-subtle text-success">24/7 Monitoreo</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-semibold px-4 py-3"><i class="fa-solid fa-server text-warning me-2"></i> Virtualización & Infraestructura</td>
+                                <td>Escalable / Servidores</td>
+                                <td>2 - 3 Semanas</td>
+                                <td><span class="badge bg-success-subtle text-success">24/7 Disponible</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Reutilizable -->
+    <footer class="bg-body-tertiary border-top py-4 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6">
+                    <span class="fw-bold text-body">Dejesus & Associated</span> — Technology Solutions &copy; 2026. Todos los derechos reservados.
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="servicios.html" class="text-secondary text-decoration-none me-3 small">Servicios</a>
+                    <a href="presupuesto.html" class="text-secondary text-decoration-none me-3 small">Presupuesto</a>
+                    <a href="contacto.html" class="text-secondary text-decoration-none small">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

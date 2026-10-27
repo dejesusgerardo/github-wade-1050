@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Dejesus & Associated</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Script de Tema -->
+    <script src="js/theme-toggle.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body text-body">
+
+    <!-- Header / Navegación Reutilizable -->
+    <header class="sticky-top glass-nav">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex items-center gap-3" href="index.html">
+                    <div class="brand-icon">D&A</div>
+                    <div class="d-flex flex-column ms-2">
+                        <span class="fw-bold fs-5 lh-1 text-body">Dejesus & Associated</span>
+                        <span class="text-primary text-uppercase font-monospace fs-7 fw-semibold mt-1">Technology Solutions</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="presupuesto.html">Presupuesto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                        <button id="themeToggle" type="button" class="btn btn-outline-secondary rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Cambiar Tema">
+                            <i id="themeIcon" class="fa-solid fa-moon"></i>
+                        </button>
+                        <a href="contacto.html" class="btn btn-primary rounded-pill px-4 fw-semibold shadow-sm">Consulta Gratis</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal: Contacto -->
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mb-3 text-uppercase fw-semibold">Atención Personalizada</span>
+                        <h1 class="display-6 fw-bold mb-2">Póngase en Contacto con Nosotros</h1>
+                        <p class="text-secondary">¿Tiene un proyecto en mente o requiere consultoría técnica? Complete el formulario y le responderemos a la brevedad.</p>
+                    </div>
+
+                    <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label fw-medium">Nombre Completo</label>
+                                    <input type="text" class="form-control form-control-lg" id="nombre" placeholder="Ej. Juan Pérez" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-medium">Correo Electrónico</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" placeholder="correo@empresa.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="asunto" class="form-label fw-medium">Asunto / Servicio de Interés</label>
+                                    <input type="text" class="form-control form-control-lg" id="asunto" placeholder="Ej. Arquitectura de Base de Datos" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label fw-medium">Mensaje o Requerimiento</label>
+                                    <textarea class="form-control" id="mensaje" rows="5" placeholder="Describa brevemente los detalles de su proyecto..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 fw-semibold shadow">
+                                        Enviar Mensaje <i class="fa-solid fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Reutilizable -->
+    <footer class="bg-body-tertiary border-top py-4 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6">
+                    <span class="fw-bold text-body">Dejesus & Associated</span> — Technology Solutions &copy; 2026. Todos los derechos reservados.
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="servicios.html" class="text-secondary text-decoration-none me-3 small">Servicios</a>
+                    <a href="presupuesto.html" class="text-secondary text-decoration-none me-3 small">Presupuesto</a>
+                    <a href="contacto.html" class="text-secondary text-decoration-none small">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

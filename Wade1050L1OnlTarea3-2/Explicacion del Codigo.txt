@@ -1,0 +1,15 @@
+dejesus-associated/
+│
+├── index.html              # Página principal (Inicio / Landing)
+├── servicios.html          # Página dedicada a servicios detallados
+├── presupuesto.html        # Página con la Calculadora Interactiva de Presupuesto
+├── proyectos.html          # Portal de Proyectos y Portafolio
+├── contacto.html           # Formulario de Contacto y Soporte
+│
+├── css/
+│   └── custom.css          # Estilos personalizados complementarios y variables
+│
+└── js/
+    ├── theme-toggle.js     # Script global para gestionar Modo Oscuro / Claro
+    ├── app.js              # Lógica general y navegación interactiva
+    └── budget-calculator.js# Lógica de la calculadora interactiva

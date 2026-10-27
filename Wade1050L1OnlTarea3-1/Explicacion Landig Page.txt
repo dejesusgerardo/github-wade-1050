@@ -1,0 +1,15 @@
+DeJesus_Puertas_Tarea3_1.zip
+│
+├── index.html
+├── styles.css
+├── script.js
+├── Puertas01.jpeg
+├── Puertas02.jpeg
+├── Puertas03.jpeg
+├── Puertas04.jpeg
+├── Puertas05.jpeg
+├── Puertas06.jpeg
+├── Puertas07.jpeg
+├── Puertas08.jpeg
+├── Puertas09.jpeg
+└── Puertas10.jpeg

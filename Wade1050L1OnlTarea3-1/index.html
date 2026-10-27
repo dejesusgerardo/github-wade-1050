@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeJesús & Associates - Puertas de Aluminio de Interior</title>
+    <!-- CDN de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos CSS Personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO (Header & Navbar) -->
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <i class="fa-solid fa-door-open text-primary fs-2"></i>
+                <div>
+                    <span class="fw-bold d-block lh-1 text-dark">DeJesús & Associates</span>
+                    <small class="text-muted fs-7">División Puertas de Aluminio Interior</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Ventajas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary rounded-pill px-3" href="#contacto">Cotizar Ahora</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero-section text-white d-flex align-items-center">
+        <div class="container text-center position-relative z-1">
+            <h1 class="display-4 fw-bold mb-3 animate-fade-in">Elegancia y Durabilidad para tu Hogar</h1>
+            <p class="lead mb-4">Diseño moderno e innovación en puertas de aluminio para interiores de alta calidad.</p>
+            <a href="#catalogo" class="btn btn-light btn-lg text-primary fw-bold rounded-pill shadow hover-bounce">Ver Catálogo</a>
+        </div>
+        <!-- Badge Flotante con Posicionamiento Absoluto -->
+        <div class="promo-badge">
+            <span class="badge bg-warning text-dark fs-6 shadow">¡Calidad Premium 100% Garantizada!</span>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL (Main) -->
+    <main class="container my-5">
+
+        <!-- SECCIÓN NOSOTROS (Demostración de CSS Float) -->
+        <section id="nosotros" class="mb-5 py-4 border-bottom">
+            <h2 class="text-center mb-4 text-primary fw-bold">Sobre DeJesús & Associates</h2>
+            <div class="clearfix">
+                <!-- Imagen con Float a la izquierda -->
+                <div class="float-md-start me-md-4 mb-3 text-center float-image-container">
+                    <img src="Puertas01.jpeg" alt="Puerta de Aluminio DeJesús" class="img-fluid rounded shadow float-img">
+                    <p class="figcaption text-muted mt-1 fs-7">Modelo Ejecutivo - Serie Interior</p>
+                </div>
+                <div>
+                    <h3 class="h4 mb-3">Líderes en Innovación de Interiores</h3>
+                    <p>En <strong>DeJesús & Associates</strong>, transformamos espacios residenciales combinando estética contemporánea y funcionalidad de vanguardia. Nuestra división especializada en puertas de aluminio para interiores ofrece soluciones a la medida que se adaptan a dormitorios, baños, oficinas residenciales y áreas de paso.</p>
+                    <p>A diferencia de la madera tradicional, nuestras puertas de aluminio no se deforman con la humedad, no requieren mantenimiento complejo y aportan un toque arquitectónico único a cualquier ambiente. Fabricadas con acabados de alta precisión y materiales inoxidables de larga duración.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CARACTERÍSTICAS (Demostración de Flexbox) -->
+        <section id="caracteristicas" class="mb-5 py-4 bg-light rounded-4 p-4">
+            <h2 class="text-center mb-4 text-primary fw-bold">¿Por qué Elegir Nuestras Puertas?</h2>
+            <!-- Contenedor Flexbox -->
+            <div class="flex-features-container">
+                <div class="flex-feature-card">
+                    <i class="fa-solid fa-shield-halved feature-icon"></i>
+                    <h4>Resistentes a Humedad</h4>
+                    <p>Ideales para baños y zonas húmedas; inmunes al agua y termitas.</p>
+                </div>
+                <div class="flex-feature-card">
+                    <i class="fa-solid fa-wand-magic-sparkles feature-icon"></i>
+                    <h4>Diseño Elegante</h4>
+                    <p>Líneas estilizadas con acabados mate, anodizados y texturizados estilo madera.</p>
+                </div>
+                <div class="flex-feature-card">
+                    <i class="fa-solid fa-volume-xmark feature-icon"></i>
+                    <h4>Aislamiento Acústico</h4>
+                    <p>Núcleos de sellado térmico y acústico para máxima privacidad.</p>
+                </div>
+                <div class="flex-feature-card">
+                    <i class="fa-solid fa-recycle feature-icon"></i>
+                    <h4>Ecológicas</h4>
+                    <p>Aluminio 100% reciclable con producción sostenible de huella reducida.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CATÁLOGO (Demostración de CSS Grid) -->
+        <section id="catalogo" class="mb-5 py-4">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+                <div>
+                    <h2 class="text-primary fw-bold mb-0">Catálogo de Puertas (Puertas01 - Puertas10)</h2>
+                    <p class="text-muted">Explora nuestra colección exclusiva para interiores de hogar.</p>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary active" id="btnAll">Todas</button>
+                    <button type="button" class="btn btn-outline-primary" id="btnFilterModern">Destacadas</button>
+                </div>
+            </div>
+
+            <!-- Grilla CSS Grid -->
+            <div class="doors-grid-container" id="galleryGrid">
+                
+                <!-- Tarjeta 1 -->
+                <div class="door-card-item">
+                    <div class="door-card-image">
+                        <img src="Puertas01.jpeg" alt="Puerta 01">
+                        <span class="door-tag">Puertas01.jpeg</span>
+                    </div>
+                    <div class="door-card-body">
+                        <h5>Línea Minimalista Alpha</h5>
+                        <p>Diseño liso para dormitorios con acabado mate.</p>
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="openModal('Puertas01.jpeg', 'Línea Minimalista Alpha')">Ampliar Vista</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="door-card-item">
+                    <div class="door-card-image">
+                        <img src="Puertas02.jpeg" alt="Puerta 02">
+                        <span class="door-tag">Puertas02.jpeg</span>
+                    </div>
+                    <div class="door-card-body">
+                        <h5>Modelo Cristal Frosted</h5>
+                        <p>Paneles de cristal esmerilado para oficinas de casa.</p>
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="openModal('Puertas02.jpeg', 'Modelo Cristal Frosted')">Ampliar Vista</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="door-card-item">
+                    <div class="door-card-image">
+                        <img src="Puertas03.jpeg" alt="Puerta 03">
+                        <span class="door-tag">Puertas03.jpeg</span>
+                    </div>
+                    <div class="door-card-body">
+                        <h5>Serie Contemporánea Black</h5>
+                        <p>Marco negro mate de estilo industrial elegante.</p>
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="openModal('Puertas03.jpeg', 'Serie Contemporánea Black')">Ampliar Vista</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="door-card-item">
+                    <div class="door-card-image">
+                        <img src="Puertas04.jpeg" alt="Puerta 04">
+                        <span class="door-tag">Puertas04.jpeg</span>
+                    </div>
+                    <div class="door-card-body">
+                        <h5>Louver de Baño Privada</h5>
+                        <p>Con rejillas de ventilación integradas.</p>
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="openModal('Puertas04.jpeg', 'Louver de Baño Privada')">Ampliar Vista</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 5 -->
+                <div class="door-card-item">
+                    <div class="door-card-image">
+                        <img src="Puertas05.jpeg" alt="Puerta 05">
+                        <span class="door-tag">Puertas05.jpeg</span>
+                    </div>
+                    <div class="door-card-body">
+                        <h5>Corrediza Space Saver</h5>
+                        <p>Puerta corrediza de aluminio para optimizar espacios.</p>
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="openModal('Puertas05.jpeg', 'Corrediza Space Saver')">Ampliar Vista</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 6 -->
+                <div class="door-card-item">
+                    <div class="door-card-image">
+                        <img src="Puertas06.jpeg" alt="Puerta 06">
+                        <span class="door-tag">Puertas06.jpeg</span>
+                    </div>
+                    <div class="door-card-body">
+                        <h5>Modelo Wood-Grained Alu</h5>
+                        <p>Textura y apariencia de madera con la fuerza del aluminio.</p>
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="openModal('Puertas06.jpeg', 'Modelo Wood-Grained Alu')">Ampliar Vista</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 7 -->
+                <div class="door-card-item">
+                    <div class="door-card-image">
+                        <img src="Puertas07.jpeg" alt="Puerta 07">
+                        <span class="door-tag">Puertas07.jpeg</span>
+                    </div>
+                    <div class="door-card-body">
+                        <h5>Doble Hoja Residencial</h5>
+                        <p>Diseño ancho para entradas de salas y comedores.</p>
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="openModal('Puertas07.jpeg', 'Doble Hoja Residencial')">Ampliar Vista</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 8 -->
+                <div class="door-card-item">
+                    <div class="door-card-image">
+                        <img src="Puertas08.jpeg" alt="Puerta 08">
+                        <span class="door-tag">Puertas08.jpeg</span>
+                    </div>
+                    <div class="door-card-body">
+                        <h5>Línea White Satin</h5>
+                        <p>Satinado blanco elegante para habitaciones infantiles.</p>
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="openModal('Puertas08.jpeg', 'Línea White Satin')">Ampliar Vista</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 9 -->
+                <div class="door-card-item">
+                    <div class="door-card-image">
+                        <img src="Puertas09.jpeg" alt="Puerta 09">
+                        <span class="door-tag">Puertas09.jpeg</span>
+                    </div>
+                    <div class="door-card-body">
+                        <h5>Insertos Horizontales Inox</h5>
+                        <p>Detalles lineales en acero inoxidable satinado.</p>
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="openModal('Puertas09.jpeg', 'Insertos Horizontales Inox')">Ampliar Vista</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 10 -->
+                <div class="door-card-item">
+                    <div class="door-card-image">
+                        <img src="Puertas10.jpeg" alt="Puerta 10">
+                        <span class="door-tag">Puertas10.jpeg</span>
+                    </div>
+                    <div class="door-card-body">
+                        <h5>Plegable de Closet Luxe</h5>
+                        <p>Sistema acordeón metálico reforzado para closets.</p>
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="openModal('Puertas10.jpeg', 'Plegable de Closet Luxe')">Ampliar Vista</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CONTACTO -->
+        <section id="contacto" class="py-4">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <div class="bg-primary text-white p-4 rounded-4 h-100">
+                        <h3>DeJesús & Associates</h3>
+                        <p class="mb-4">Solicita una cotización o visita técnica sin compromiso para tu residencia.</p>
+                        <ul class="list-unstyled d-flex flex-column gap-3">
+                            <li><i class="fa-solid fa-location-dot me-2"></i> Calle Principal #123, San Juan, Puerto Rico</li>
+                            <li><i class="fa-solid fa-phone me-2"></i> (787) 555-0199</li>
+                            <li><i class="fa-solid fa-envelope me-2"></i> contacto@dejesusassociates.com</li>
+                            <li><i class="fa-solid fa-clock me-2"></i> Lunes a Viernes: 8:00 AM - 5:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <form id="contactForm" class="p-4 bg-white rounded-4 shadow-sm border">
+                        <h4 class="mb-3 text-dark">Formulario de Cotización</h4>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" required placeholder="Gerardo DeJesús">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" required placeholder="nombre@correo.com">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Modelo de Interés</label>
+                                <select class="form-select">
+                                    <option selected>Selecciona un modelo (Puertas01 - Puertas10)...</option>
+                                    <option>Puertas01.jpeg - Minimalista Alpha</option>
+                                    <option>Puertas02.jpeg - Cristal Frosted</option>
+                                    <option>Puertas03.jpeg - Serie Black</option>
+                                    <option>Puertas04.jpeg - Louver de Baño</option>
+                                    <option>Puertas05.jpeg - Corrediza Space Saver</option>
+                                    <option>Puertas06.jpeg - Wood-Grained Alu</option>
+                                    <option>Puertas07.jpeg - Doble Hoja</option>
+                                    <option>Puertas08.jpeg - White Satin</option>
+                                    <option>Puertas09.jpeg - Insertos Inox</option>
+                                    <option>Puertas10.jpeg - Plegable Closet</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Mensaje / Medidas aproximadas</label>
+                                <textarea class="form-control" rows="3" placeholder="Escribe detalles o medidas aquí..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100 rounded-pill">Enviar Mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (Footer) -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <h5 class="text-primary mb-3">DeJesús & Associates</h5>
+                    <p class="text-secondary small">Especialistas en la fabricación, diseño e instalación de puertas de aluminio de alta gama para interiores residenciales y comerciales.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-secondary text-decoration-none">Inicio</a></li>
+                        <li><a href="#nosotros" class="text-secondary text-decoration-none">Nosotros</a></li>
+                        <li><a href="#catalogo" class="text-secondary text-decoration-none">Catálogo de Puertas</a></li>
+                        <li><a href="#contacto" class="text-secondary text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-secondary small">
+                <p class="mb-0">&copy; 2026 DeJesús & Associates. Tarea 3.1 - WADE 1050. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL JS PARA AMPLIAR IMAGEN -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Puerta de Aluminio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImg" src="" class="img-fluid rounded shadow" alt="Vista Ampliada">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts: Bootstrap 5 JS Bundle y Script Personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
