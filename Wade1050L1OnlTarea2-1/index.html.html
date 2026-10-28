@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- REQUERIMIENTO: Crea un documento HTML con el título (index.html) -->
+  <title>index.html - Proyecto Web Accesible y CSS Avanzado</title>
+  
+  <!-- REQUERIMIENTO: Utilizar el framework Bootstrap para mejorar el diseño -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- REQUERIMIENTO: Crea un archivo CSS separado y enlázalo con tu documento HTML (styles.css) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- REQUERIMIENTO: Estructura de la página web - Secciones distintas (<header>, <nav>) -->
+  <header class="custom-header text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold animate-title">WADE 1050L - 1ONL Diseño Web</h1>
+      <p class="lead mb-0">Tarea 2-1 Gerardo De Jesús</p>
+    </div>
+  </header>
+
+  <!-- REQUERIMIENTO ACCESIBILIDAD Y NAVEGACIÓN: Navegación coherente, lógica con <nav> y atributos aria-label -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">TechPortal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tabla-datos">Estadísticas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- REQUERIMIENTO: Estructura semántica - Elemento <main> para el contenido principal -->
+  <main class="container my-5" id="inicio">
+    <div class="row g-4">
+      
+      <!-- REQUERIMIENTO: Estructura semántica - Elemento <section> -->
+      <section class="col-lg-8" aria-labelledby="seccion-articulos">
+        <h2 id="seccion-articulos" class="mb-4 section-title">Artículos Destacados</h2>
+
+        <div id="construccionAlert" aria-live="polite"></div>
+
+        <!-- REQUERIMIENTO: Estructura semántica - Elemento <article> -->
+        <article class="card custom-card mb-4 shadow-sm">
+          <!-- REQUERIMIENTO ACCESIBILIDAD: Utiliza atributos alt para imágenes -->
+          <img src="Imagen1.jpg" class="card-img-top" alt="Ilustración sobre el desarrollo de software accesible e inclusivo" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title h4">Diseño Web Inclusivo y Accesible</h3>
+            <p class="card-text">
+              La accesibilidad web garantiza que todas las personas, independientemente de sus capacidades físicas o cognitivas, puedan percibir, entender, navegar e interactuar con la web de manera efectiva.
+            </p>
+            <!-- REQUERIMIENTO CLASES E IDS: Dar estilo a un botón utilizando una clase CSS (.btn-interactive) -->
+            <button type="button" class="btn btn-primary custom-btn btn-interactive" id="btnLeerMas">Leer más</button>
+          </div>
+        </article>
+
+        <article class="card custom-card mb-4 shadow-sm" id="servicios">
+          <!-- REQUERIMIENTO ACCESIBILIDAD: Atributo alt descriptivo en imagen -->
+          <img src="Imagen2.jpg" class="card-img-top" alt="Representación gráfica de CSS3 y animaciones modernas" loading="lazy">
+          <div class="card-body">
+            <h3 class="card-title h4">Efectos Avanzados con CSS3</h3>
+            <p class="card-text">
+              Utilizando sombras (`box-shadow`), transformaciones (`transform`), transiciones suaves y gradientes dinámicos, logramos una experiencia visual atractiva sin sacrificar rendimiento ni accesibilidad.
+            </p>
+            <button type="button" class="btn btn-success custom-btn btn-interactive" id="btnExplorar">Explorar Estilos</button>
+          </div>
+        </article>
+
+        <!-- REQUERIMIENTO TABLAS: Aplica etiquetas HTML adecuadas <table>, <tr>, <th>, <td> y estilízalas con CSS -->
+        <section id="tabla-datos" class="mt-5" aria-labelledby="titulo-tabla">
+          <h3 id="titulo-tabla" class="h4 mb-3 border-bottom pb-2">Tabla de Desempeño y Proyectos</h3>
+          <div class="table-responsive">
+            <table class="table custom-table align-middle">
+              <caption class="visually-hidden">Resumen de desempeño de proyectos del sistema</caption>
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Proyecto</th>
+                  <th scope="col">Categoría</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Puntuación Accesibilidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">01</th>
+                  <td>Rediseño Portal Web</td>
+                  <td>Desarrollo Web</td>
+                  <td><span class="badge bg-success">Completado</span></td>
+                  <td>100 / 100</td>
+                </tr>
+                <tr>
+                  <th scope="row">02</th>
+                  <td>Sistema de Inventario</td>
+                  <td>Aplicación Base de Datos</td>
+                  <td><span class="badge bg-warning text-dark">En Progreso</span></td>
+                  <td>98 / 100</td>
+                </tr>
+                <tr>
+                  <th scope="row">03</th>
+                  <td>Módulo de Reportes PDF</td>
+                  <td>Optimización IT</td>
+                  <td><span class="badge bg-info text-dark">Planificado</span></td>
+                  <td>95 / 100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <!-- REQUERIMIENTO: Estructura semántica - Elemento <aside> (Barra lateral) -->
+      <aside class="col-lg-4">
+        <div class="card custom-card sidebar-card mb-4 shadow-sm">
+          <div class="card-body">
+            <h3 class="h5 card-title">Información Adicional</h3>
+            <p class="card-text">
+              Este proyecto aplica estándares W3C y buenas prácticas en desarrollo frontend utilizando Bootstrap 5 para el maquetado responsive y CSS3 puro para personalizaciones avanzadas.
+            </p>
+          </div>
+        </div>
+
+        <!-- REQUERIMIENTO FORMULARIOS: Aplica los formularios con <form>, <input>, <label>, <textarea>, <select> -->
+        <!-- REQUERIMIENTO ACCESIBILIDAD: Utiliza etiquetas <label> en formularios asociadas correctamente mediante id/for -->
+        <section id="contacto" class="card custom-card form-card shadow-sm" aria-labelledby="titulo-contacto">
+          <div class="card-body">
+            <h3 id="titulo-contacto" class="h5 card-title mb-3">Formulario de Registro</h3>
+            
+            <form id="contactForm" novalidate>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo <span class="text-danger">*</span></label>
+                <input type="text" class="form-control custom-input" id="nombre" name="nombre" placeholder="William Perez" required aria-required="true">
+              </div>
+
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico <span class="text-danger">*</span></label>
+                <input type="email" class="form-control custom-input" id="correo" name="correo" placeholder="usuario@ejemplo.com" required aria-required="true">
+              </div>
+
+              <div class="mb-3">
+                <label for="servicio" class="form-label">Área de Interés</label>
+                <select class="form-select custom-select" id="servicio" name="servicio">
+                  <option value="" selected>Seleccione una opción</option>
+                  <option value="desarrollo">Desarrollo Web</option>
+                  <option value="accesibilidad">Auditoría de Accesibilidad</option>
+                  <option value="base-datos">Administración de Bases de Datos</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Comentarios o Mensaje <span class="text-danger">*</span></label>
+                <textarea class="form-control custom-textarea" id="mensaje" name="mensaje" rows="4" placeholder="Escriba su consulta aquí..." required aria-required="true"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 btn-interactive" id="submitBtn">Enviar Formulario</button>
+            </form>
+            <div id="formFeedback" class="mt-3 text-center" aria-live="polite"></div>
+          </div>
+        </section>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- REQUERIMIENTO: Estructura semántica - Elemento <footer> (Pie de página) -->
+  <footer class="custom-footer text-center py-4 mt-auto">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Portal de Innovación Tecnológica. Todos los derechos reservados.</p>
+      <p class="small text-muted mb-0">Diseñado garantizando estándares de accesibilidad (WCAG 2.1) y diseño responsivo.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
