@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--
+  ==========================================================================
+  WADE 1050 1ONL – Tarea 2-1 – Gerardo De Jesús
+  PROYECTO: HTML + CSS (sin JavaScript propio) con Bootstrap 5 (solo CSS)
+
+  MAPA DE REQUERIMIENTOS (Instrucciones y Rúbrica 2.1)  →  DÓNDE SE CUMPLE
+  --------------------------------------------------------------------------
+  ESTRUCTURA DE LA PÁGINA (10 pts)
+    [x] Al menos 3 secciones (encabezado, contenido, pie) ... <header>, <main>, <footer>
+    [x] Documento index.html con <html>, <head>, <body> ..... este archivo
+    [x] Etiquetas semánticas: header, nav, main, section,
+        article, aside, footer ............................... ver comentarios [E1]–[E7]
+    [x] Una sola página ....................................... un único index.html
+  CSS Y SELECTORES (10 pts)
+    [x] Archivo CSS separado y enlazado (styles.css) .......... <link> en <head> [C1]
+    [x] Selectores de clase, ID, etiqueta y combinados ........ ver styles.css secciones 2–10
+    [x] Propiedades avanzadas: box-shadow, transform,
+        transition, gradients (y más) ......................... ver styles.css
+  CLASES E IDs (5 pts)
+    [x] Clases e IDs usados apropiadamente (botón con clase) .. .btn-interactive, #contacto, #titulo-tabla
+  PROPIEDADES CSS (5 pts)
+    [x] color, font-size, margin, padding, background-color,
+        border ................................................ ver styles.css
+  TABLAS (10 pts)
+    [x] <table>, <tr>, <th>, <td> + estilos CSS ............... sección [T1]
+  FORMULARIOS (10 pts)
+    [x] <form>, <input>, <label>, <textarea>, <select>
+        estilizados y fáciles de usar ......................... sección [F1]
+  ACCESIBILIDAD (5 pts)
+    [x] alt en imágenes, <label> en formularios, navegación
+        coherente y lógica .................................... ver comentarios [A1]–[A6]
+  ==========================================================================
+-->
+<html lang="es"> <!-- [A1] Idioma declarado para lectores de pantalla -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tarea 2-1 de WADE 1050: página web accesible con HTML semántico, CSS avanzado y Bootstrap 5.">
+  <title>Proyecto Web Accesible - Selectores y CSS Avanzado</title>
+
+  <!-- Bootstrap 5 (framework, solo hoja de estilos: el requisito pide usar Bootstrap) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- [C1] REQUERIMIENTO: archivo CSS separado y enlazado (styles.css) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- [A2] Enlace "saltar al contenido": ayuda a quienes navegan con teclado -->
+  <a class="skip-link visually-hidden-focusable" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- [E1] ENCABEZADO: <header> (ID #inicio, selector de ID en CSS) -->
+  <header id="inicio" class="custom-header text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold animate-title">WADE 1050L - 1ONL</h1>
+      <h1 class="display-5 fw-bold animate-title">Diseño Web</h1>
+      <p class="lead mb-0">Tarea 2-1</p>
+      <p class="lead mb-0">Gerardo De Jesús</p>
+
+    </div>
+  </header>
+
+  <!-- [E2] NAVEGACIÓN: <nav> con enlaces internos en el mismo orden en que aparece el contenido [A3] -->
+  <nav class="navbar navbar-expand sticky-top shadow-sm custom-nav" data-bs-theme="dark" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio">TechPortal</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#inicio" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#articulos">Artículos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tabla-datos">Estadísticas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- [E3] CONTENIDO PRINCIPAL: <main> (única por página) -->
+  <main class="container my-5" id="contenido">
+    <div class="row g-4">
+
+      <div class="col-lg-8">
+
+        <!-- [E4] <section>: agrupa los artículos; su título lo nombra con aria-labelledby [A4] -->
+        <section id="articulos" aria-labelledby="seccion-articulos">
+          <h2 id="seccion-articulos" class="mb-4 section-title">Artículos Destacados</h2>
+
+          <!-- Aviso "en construcción": se muestra con CSS (:target) al pulsar los botones, sin JavaScript -->
+          <div id="en-construccion" class="alert alert-warning shadow-sm mb-4 aviso-construccion" role="status">
+            <span aria-hidden="true">🚧</span> <strong>¡Aviso!</strong> Esta página se encuentra actualmente en construcción. ¡Próximamente disponible!
+            <a class="alert-link ms-2" href="#articulos">Cerrar aviso</a>
+          </div>
+
+          <!-- [E5] <article> 1: contenido independiente con imagen local -->
+          <article class="card custom-card shadow-sm">
+            <!-- [A5] REQUERIMIENTO ACCESIBILIDAD: atributo alt que describe lo que muestra la imagen -->
+            <img src="Imagen1.jpg" class="card-img-top" width="1200" height="800" loading="lazy"
+                 alt="Sala de control de transmisión con una pared de monitores y una consola de producción iluminada, operada por dos técnicos.">
+            <div class="card-body">
+              <h3 class="card-title h4">Diseño Web Inclusivo y Accesible</h3>
+              <p class="card-text">
+                La accesibilidad web garantiza que todas las personas, independientemente de sus capacidades físicas o cognitivas, puedan percibir, entender, navegar e interactuar con la web de manera efectiva.
+              </p>
+              <!-- REQUERIMIENTO CLASES: botón estilizado con una clase CSS (.btn-interactive) -->
+              <a class="btn btn-primary btn-interactive" role="button" href="#en-construccion">Leer más</a>
+            </div>
+          </article>
+
+          <!-- <article> 2 -->
+          <article class="card custom-card shadow-sm">
+            <img src="Imagen2.jpg" class="card-img-top" width="1417" height="740" loading="lazy"
+                 alt="Vista nocturna de una ciudad con rascacielos conectados por líneas de luz de neón, que representan una red tecnológica.">
+            <div class="card-body">
+              <h3 class="card-title h4">Efectos Avanzados con CSS3</h3>
+              <p class="card-text">
+                Utilizando sombras (<code>box-shadow</code>), transformaciones (<code>transform</code>), transiciones suaves y gradientes dinámicos, logramos una experiencia visual atractiva sin sacrificar rendimiento ni accesibilidad.
+              </p>
+              <a class="btn btn-success btn-interactive" role="button" href="#en-construccion">Explorar Estilos</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- [T1] REQUERIMIENTO TABLAS: <table>, <tr>, <th>, <td> (+ <thead>, <tbody>, <caption>) -->
+        <section id="tabla-datos" class="mt-5" aria-labelledby="titulo-tabla">
+          <h2 id="titulo-tabla" class="h4 mb-3">Tabla de Desempeño y Proyectos</h2>
+          <div class="table-responsive">
+            <table class="custom-table">
+              <caption>Resumen del estado y la puntuación de accesibilidad de cada proyecto</caption>
+              <thead>
+                <tr>
+                  <!-- [A6] scope="col"/"row" relaciona cada celda con su encabezado para lectores de pantalla -->
+                  <th scope="col">ID</th>
+                  <th scope="col">Proyecto</th>
+                  <th scope="col">Categoría</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Puntuación Accesibilidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">01</th>
+                  <td>Rediseño Portal Web</td>
+                  <td>Desarrollo Web</td>
+                  <td><span class="badge text-bg-success">Completado</span></td>
+                  <td>100 / 100</td>
+                </tr>
+                <tr>
+                  <th scope="row">02</th>
+                  <td>Sistema de Inventario</td>
+                  <td>Aplicación Base de Datos</td>
+                  <td><span class="badge text-bg-warning">En Progreso</span></td>
+                  <td>98 / 100</td>
+                </tr>
+                <tr>
+                  <th scope="row">03</th>
+                  <td>Módulo de Reportes PDF</td>
+                  <td>Optimización IT</td>
+                  <td><span class="badge text-bg-info">Planificado</span></td>
+                  <td>95 / 100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- [E6] BARRA LATERAL: <aside> -->
+      <aside class="col-lg-4">
+        <div class="card custom-card shadow-sm">
+          <div class="card-body">
+            <h2 class="h5 card-title">Información Adicional</h2>
+            <p class="card-text">
+              Este proyecto aplica estándares W3C y buenas prácticas en desarrollo frontend utilizando Bootstrap 5 para el maquetado responsive y CSS3 puro para personalizaciones avanzadas.
+            </p>
+          </div>
+        </div>
+
+        <!-- [F1] REQUERIMIENTO FORMULARIOS: <form>, <input>, <label>, <textarea>, <select>
+             Validación nativa de HTML5 (required, type="email", minlength): no necesita JavaScript.
+             Al enviarse correctamente va a #gracias y CSS (:target) muestra el mensaje de éxito. -->
+        <section id="contacto" class="card custom-card form-card shadow-sm" aria-labelledby="titulo-contacto">
+          <div class="card-body">
+            <h2 id="titulo-contacto" class="h5 card-title mb-3">Formulario de Contacto</h2>
+            <p class="small mb-3">Los campos con <span class="obligatorio" aria-hidden="true">*</span> son obligatorios.</p>
+
+            <form action="#gracias" method="get">
+
+              <div class="mb-3">
+                <!-- [A7] Cada control tiene su <label for="..."> enlazado por id -->
+                <label for="nombre" class="custom-label">Nombre completo <span class="obligatorio" aria-hidden="true">*</span></label>
+                <input type="text" class="form-control custom-input" id="nombre" name="nombre"
+                       placeholder="Ej.: María Rivera" autocomplete="name" required minlength="2"
+                       aria-describedby="error-nombre">
+                <p class="campo-error" id="error-nombre">Escriba su nombre completo (mínimo 2 caracteres).</p>
+              </div>
+
+              <div class="mb-3">
+                <label for="correo" class="custom-label">Correo electrónico <span class="obligatorio" aria-hidden="true">*</span></label>
+                <input type="email" class="form-control custom-input" id="correo" name="correo"
+                       placeholder="usuario@ejemplo.com" autocomplete="email" required
+                       aria-describedby="error-correo">
+                <p class="campo-error" id="error-correo">Escriba un correo válido, por ejemplo usuario@ejemplo.com.</p>
+              </div>
+
+              <div class="mb-3">
+                <label for="servicio" class="custom-label">Área de interés</label>
+                <select class="form-select custom-select" id="servicio" name="servicio">
+                  <option value="" selected>Seleccione una opción</option>
+                  <option value="desarrollo">Desarrollo Web</option>
+                  <option value="accesibilidad">Auditoría de Accesibilidad</option>
+                  <option value="base-datos">Administración de Bases de Datos</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="mensaje" class="custom-label">Comentarios o mensaje <span class="obligatorio" aria-hidden="true">*</span></label>
+                <textarea class="form-control custom-textarea" id="mensaje" name="mensaje" rows="4"
+                          placeholder="Escriba su consulta aquí..." required minlength="10"
+                          aria-describedby="error-mensaje"></textarea>
+                <p class="campo-error" id="error-mensaje">El mensaje debe tener al menos 10 caracteres.</p>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 btn-interactive">Enviar formulario</button>
+            </form>
+
+            <!-- Mensaje de éxito: oculto hasta que la URL termina en #gracias (CSS :target) -->
+            <div id="gracias" class="alert alert-success mt-3 mb-0 mensaje-exito" role="status">
+              ¡Gracias! Tu mensaje ha sido enviado exitosamente.
+            </div>
+          </div>
+        </section>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- [E7] PIE DE PÁGINA: <footer> -->
+  <footer class="custom-footer text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Portal de Innovación Tecnológica. Todos los derechos reservados.</p>
+      <p class="small mb-0 footer-nota">Diseñado garantizando estándares de accesibilidad (WCAG 2.1) y diseño responsivo.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

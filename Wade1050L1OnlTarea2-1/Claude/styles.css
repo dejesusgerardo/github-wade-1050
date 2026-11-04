@@ -1,0 +1,489 @@
+/* ==========================================================================
+   WADE 1050 1ONL – Tarea 2-1 – Gerardo De Jesús
+   styles.css  (REQUERIMIENTO: archivo CSS separado, enlazado desde index.html)
+
+   MAPA DE REQUERIMIENTOS  →  DÓNDE SE CUMPLE
+   --------------------------------------------------------------------------
+   1. Variables CSS y propiedades base ............... sección 1
+   2. Selector de ETIQUETA (body, h1, a, table...) ... secciones 2 y 9
+   3. Selectores de CLASE (.custom-card, .btn-...) ... secciones 3–8
+   4. Selectores de ID (#inicio, #contacto, ...) ..... sección 10
+   5. Selectores COMBINADOS / avanzados:
+        descendiente (A B), hijo (A > B), hermano
+        adyacente (A + B), hermano general (A ~ B),
+        atributo [required], agrupados (A, B),
+        pseudo-clases (:hover, :focus, :focus-visible,
+        :nth-child, :target, :user-invalid),
+        pseudo-elementos (::after, ::placeholder) ..... a lo largo del archivo
+   6. Propiedades avanzadas:
+        box-shadow, transform, transition,
+        gradients (linear y radial), @keyframes ....... secciones 3–6
+   7. Propiedades básicas: color, font-size, margin,
+        padding, background-color, border ............. en todo el archivo
+   8. Tablas ......................................... sección 9
+   9. Formularios .................................... sección 8
+  10. Accesibilidad (foco visible, contraste,
+        movimiento reducido) .......................... secciones 11 y 12
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES CSS (:root)  –  colores y valores reutilizables
+   -------------------------------------------------------------------------- */
+:root {
+  --primary-gradient: linear-gradient(135deg, #0d6efd 0%, #0a58ca 50%, #031633 100%);
+  --table-gradient: linear-gradient(90deg, #212529 0%, #343a40 100%);
+  --color-primary: #0a58ca;       /* azul con buen contraste sobre blanco (≈6.6:1) */
+  --color-text: #212529;
+  --color-bg: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-border: #dee2e6;
+  --color-error: #b02a37;         /* rojo con buen contraste sobre blanco */
+  --color-ok: #146c43;
+  --radius: 12px;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Desplazamiento suave al usar los enlaces internos del menú */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Los destinos de enlaces internos no quedan tapados por el menú fijo (selector de atributo) */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. SELECTOR DE ETIQUETA  –  body
+      Propiedades: background-color, color, font-size, margin, padding
+   -------------------------------------------------------------------------- */
+body {
+  background-color: var(--color-bg);   /* background-color */
+  color: var(--color-text);            /* color */
+  font-size: 1rem;                     /* font-size */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;                           /* margin */
+  padding: 0;                          /* padding */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas de texto: tamaño de fuente y márgenes coherentes */
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+code {
+  color: #a61e4d;
+  background-color: #f1f3f5;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. ENCABEZADO  –  selector de CLASE (.custom-header) + GRADIENTS
+      Avanzado: linear-gradient, radial-gradient, @keyframes, transform
+   -------------------------------------------------------------------------- */
+.custom-header {
+  /* Gradients: degradado radial sutil encima del degradado lineal principal */
+  background:
+    radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.18), transparent 45%),
+    var(--primary-gradient);
+  border-bottom: 4px solid #0d6efd;    /* border */
+  padding: 3rem 0;                     /* padding */
+}
+
+/* Animación de entrada del título: transform + opacity con @keyframes */
+@keyframes entrada-titulo {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-title {
+  animation: entrada-titulo 0.8s ease-out both;
+  font-size: 2.5rem;                   /* font-size */
+}
+
+.custom-header .lead {                 /* selector DESCENDIENTE */
+  color: #e7f1ff;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. NAVEGACIÓN  –  selectores descendientes, hijo, pseudo-clases y ::after
+   -------------------------------------------------------------------------- */
+.custom-nav {
+  background-color: #212529;
+}
+
+/* Subrayado animado bajo cada enlace (pseudo-elemento ::after + transform + transition) */
+.custom-nav .nav-link {                /* DESCENDIENTE */
+  position: relative;
+}
+
+.custom-nav .nav-link::after {         /* PSEUDO-ELEMENTO */
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 4px;
+  height: 2px;
+  background-color: #6ea8fe;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.custom-nav .nav-link:hover::after,
+.custom-nav .nav-link:focus-visible::after,
+.custom-nav .nav-link[aria-current="page"]::after {   /* selector de ATRIBUTO */
+  transform: scaleX(1);
+}
+
+/* En pantallas pequeñas los enlaces pasan a otra línea en vez de desbordarse */
+.custom-nav > .container {             /* selector HIJO (>) */
+  flex-wrap: wrap;
+}
+
+.custom-nav .navbar-nav {
+  flex-wrap: wrap;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. TÍTULOS DE SECCIÓN  –  clase + ::after (decoración con gradient)
+   -------------------------------------------------------------------------- */
+.section-title {
+  font-size: 1.75rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin-top: 0.5rem;
+  border-radius: 2px;
+  background: var(--primary-gradient);  /* gradient */
+}
+
+
+/* --------------------------------------------------------------------------
+   6. TARJETAS  –  box-shadow, transform, transition
+      Propiedades: margin, padding, border, background-color
+   -------------------------------------------------------------------------- */
+.custom-card {
+  border: 1px solid #e3e6f0;           /* border */
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;               /* margin */
+  padding: 0.5rem;                     /* padding */
+  background-color: var(--color-surface); /* background-color */
+  box-shadow: var(--shadow-sm);        /* box-shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* transition */
+}
+
+.custom-card:hover {                   /* PSEUDO-CLASE :hover */
+  transform: translateY(-5px);         /* transform */
+  box-shadow: var(--shadow-lg);        /* box-shadow ampliada */
+}
+
+/* Hermano ADYACENTE (+) con etiqueta + clase: línea de acento entre artículos consecutivos */
+article.custom-card + article.custom-card {
+  border-top: 4px solid var(--color-primary);
+}
+
+/* DESCENDIENTE: imagen de la tarjeta con altura uniforme */
+.custom-card .card-img-top {
+  height: 260px;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 4px);
+}
+
+/* HIJO (>): título directo dentro del cuerpo de la tarjeta */
+.custom-card > .card-body > .card-title {
+  color: var(--color-primary);
+}
+
+/* Tarjeta del formulario con borde superior de acento */
+.form-card {
+  border-top: 4px solid #0d6efd;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. BOTONES  –  REQUERIMIENTO: estilizar un botón usando una CLASE CSS
+      (.btn-interactive)  |  transition, transform, box-shadow
+   -------------------------------------------------------------------------- */
+.btn-interactive {
+  padding: 0.6rem 1.2rem;              /* padding */
+  font-size: 1rem;                     /* font-size */
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn-interactive:hover {
+  transform: scale(1.03);              /* transform */
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);   /* box-shadow */
+}
+
+.btn-interactive:active {
+  transform: scale(0.98);
+}
+
+
+/* --------------------------------------------------------------------------
+   8. FORMULARIOS  –  <input>, <textarea>, <select>, <label>
+      Estilos aplicados con las clases .custom-input / .custom-select /
+      .custom-textarea / .custom-label que SÍ están en el HTML.
+   -------------------------------------------------------------------------- */
+.custom-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;              /* margin */
+  display: inline-block;
+}
+
+.obligatorio {
+  color: var(--color-error);           /* color */
+  font-weight: 700;
+}
+
+/* Selector AGRUPADO: mismos estilos para input, select y textarea */
+.custom-input,
+.custom-select,
+.custom-textarea {
+  border: 1px solid #6c757d;           /* border (contraste ≥ 3:1 con el fondo) */
+  padding: 0.6rem 0.75rem;             /* padding */
+  font-size: 0.95rem;                  /* font-size */
+  color: var(--color-text);            /* color */
+  background-color: #fafafa;           /* background-color */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* Selector de ATRIBUTO: marca visualmente los campos obligatorios */
+.custom-input[required],
+.custom-textarea[required] {
+  border-left: 4px solid var(--color-primary);
+}
+
+/* PSEUDO-ELEMENTO ::placeholder con contraste suficiente */
+.custom-input::placeholder,
+.custom-textarea::placeholder {
+  color: #5c636a;
+  opacity: 1;
+}
+
+/* PSEUDO-CLASE :focus – anillo de foco visible */
+.custom-input:focus,
+.custom-select:focus,
+.custom-textarea:focus {
+  background-color: #ffffff;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.35);
+  outline: none;
+}
+
+/* Validación SIN JavaScript: :user-invalid / :user-valid (se activan al interactuar).
+   Van en reglas separadas para que un navegador antiguo no descarte las demás. */
+.custom-input:user-invalid {
+  border-color: var(--color-error);
+  background-color: #fff5f5;
+}
+
+.custom-textarea:user-invalid {
+  border-color: var(--color-error);
+  background-color: #fff5f5;
+}
+
+.custom-input:user-valid {
+  border-color: var(--color-ok);
+}
+
+.custom-textarea:user-valid {
+  border-color: var(--color-ok);
+}
+
+/* Mensajes de error: ocultos hasta que el campo anterior es inválido.
+   Hermano GENERAL (~) entre el control y su mensaje. */
+.campo-error {
+  display: none;
+  color: var(--color-error);
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0;
+}
+
+.custom-input:user-invalid ~ .campo-error {
+  display: block;
+}
+
+.custom-textarea:user-invalid ~ .campo-error {
+  display: block;
+}
+
+/* Mensaje de éxito: oculto por defecto, visible con :target (URL termina en #gracias) */
+.mensaje-exito {
+  display: none;
+}
+
+.mensaje-exito:target {                /* PSEUDO-CLASE :target */
+  display: block;
+}
+
+/* Aviso "en construcción": mismo mecanismo con :target */
+.aviso-construccion {
+  display: none;
+}
+
+.aviso-construccion:target {
+  display: block;
+}
+
+
+/* --------------------------------------------------------------------------
+   9. TABLAS  –  REQUERIMIENTO: estilizar <table>, <tr>, <th>, <td> con CSS
+      Selectores de etiqueta combinados con clase: .custom-table th / td / tr
+   -------------------------------------------------------------------------- */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #dee2e6;           /* border */
+  background-color: var(--color-surface);  /* background-color */
+  box-shadow: var(--shadow-sm);
+}
+
+.custom-table caption {
+  caption-side: top;
+  padding: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: #495057;
+  text-align: left;
+}
+
+/* Encabezado con GRADIENT: se aplica a las celdas <th> del <thead> */
+.custom-table thead th {
+  background: var(--table-gradient);   /* gradient */
+  color: #ffffff;                      /* color */
+  text-align: left;
+}
+
+/* Selector AGRUPADO para celdas de datos y de encabezado */
+.custom-table th,
+.custom-table td {
+  padding: 0.75rem 1rem;               /* padding */
+  font-size: 0.95rem;                  /* font-size */
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+/* PSEUDO-CLASE :nth-child → filas alternas (cebra) */
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+/* :hover → retroalimentación visual al pasar el cursor */
+.custom-table tbody tr:hover {
+  background-color: #dbeafe;
+}
+
+.custom-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+/* :last-child → sin línea inferior en la última fila */
+.custom-table tbody tr:last-child th,
+.custom-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   10. SELECTORES DE ID  –  #inicio, #contacto, #titulo-tabla
+   -------------------------------------------------------------------------- */
+#inicio {
+  position: relative;
+}
+
+#contacto {
+  margin-top: 1rem;                    /* margin */
+}
+
+#titulo-tabla {
+  color: var(--color-primary);         /* color */
+  font-size: 1.25rem;                  /* font-size */
+  border-bottom: 2px solid var(--color-border);   /* border */
+  padding-bottom: 0.5rem;              /* padding */
+}
+
+
+/* --------------------------------------------------------------------------
+   11. PIE DE PÁGINA  –  clase .custom-footer
+   -------------------------------------------------------------------------- */
+.custom-footer {
+  background-color: #212529;           /* background-color */
+  color: #ced4da;                      /* color (contraste ≈ 10:1) */
+  margin-top: auto;                    /* margin: empuja el footer al final */
+  padding: 1.5rem 0;                   /* padding */
+  font-size: 0.9rem;                   /* font-size */
+}
+
+.custom-footer .footer-nota {          /* DESCENDIENTE */
+  color: #adb5bd;                      /* contraste ≈ 7.6:1 sobre #212529 */
+}
+
+
+/* --------------------------------------------------------------------------
+   12. ACCESIBILIDAD  –  foco visible, enlace de salto y movimiento reducido
+   -------------------------------------------------------------------------- */
+
+/* Foco visible para navegación con teclado (botones, enlaces, controles) */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* En la barra oscura el anillo de foco es amarillo para mantener el contraste */
+.custom-nav a:focus-visible {
+  outline-color: #ffc107;
+  outline-offset: -3px;
+}
+
+/* Enlace "Saltar al contenido": aparece solo cuando recibe el foco */
+.skip-link:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2000;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+
+/* Respeta a quienes desactivan las animaciones en su sistema */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .custom-card:hover,
+  .btn-interactive:hover {
+    transform: none;
+  }
+}

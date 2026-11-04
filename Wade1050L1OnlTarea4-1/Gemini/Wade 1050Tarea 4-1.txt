@@ -1,0 +1,20 @@
+galeria-bootstrap/
+│
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── main.js (opcional para interactividad adicional)
+└── images/
+    ├── carousel-1.jpg
+    ├── carousel-2.jpg
+    ├── carousel-3.jpg
+    ├── cat-nature-1.jpg
+    ├── cat-nature-2.jpg
+    ├── cat-nature-3.jpg
+    ├── cat-urban-1.jpg
+    ├── cat-urban-2.jpg
+    ├── cat-urban-3.jpg
+    ├── cat-tech-1.jpg
+    ├── cat-tech-2.jpg
+    └── cat-tech-3.jpg
